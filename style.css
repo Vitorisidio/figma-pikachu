@@ -20,20 +20,20 @@ header {
     gap: 16px;
 }
 
-header span{
+header span {
     font-size: 32px;
     color: var(--secundary-color);
 }
 
-main{
+main {
     flex-grow: 1;
     display: flex;
     flex-direction: column;
 }
 
-.sombra{
+.sombra {
     position: absolute;
-    font-size: 400px;   
+    font-size: 26vw;
     color: #ffffff55;
     z-index: -999;
     left: 50%;
@@ -43,17 +43,17 @@ main{
 
 }
 
-h1{
+h1 {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-grow: 1;
-    font-size: 300px;
+    font-size: 20vw;
     color: white;
 }
 
 
-.container{
+.container {
     height: 154px;
     display: flex;
     justify-content: space-between;
@@ -61,18 +61,18 @@ h1{
     align-items: flex-end;
 }
 
-.descricao h2{
+.descricao h2 {
     font-size: 64px;
     color: var(--secundary-color);
 }
 
-.descricao p{
+.descricao p {
     font-size: 20px;
     color: var(--secundary-color);
     width: 500px;
 }
 
-.container a{
+.container a {
     width: 400px;
     height: 100px;
     background-color: var(--secundary-color);
@@ -84,15 +84,60 @@ h1{
 
 }
 
-.pikachu{
+.pikachu {
     position: absolute;
-     left: 50%;
+    left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
     z-index: 999;
 }
 
-footer{
-text-align: center;
-color: var(--secundary-color);
+footer {
+    text-align: center;
+    color: var(--secundary-color);
 }
+
+/* tablet */
+@media (max-width: 768px) {
+
+    body {
+        padding: 30px;
+    }
+    
+    .sombra{    transform: translate(-50%, -180%);
+    
+    }
+
+    h1{
+        align-items: start;
+        transform: translateY(40%);
+        flex-grow: 0;
+    }
+    
+     .descricao p{
+
+        text-align: 0;
+    }
+
+    footer {
+        display: none;
+    }
+    .container{
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        padding: 0;
+    }
+
+    main{
+        justify-content: space-between;
+        
+    }
+   
+
+
+}
+
+/* MOBILE */
+
+@media (max-width: 480px) {}
